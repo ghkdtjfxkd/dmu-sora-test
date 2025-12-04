@@ -1,0 +1,51 @@
+mp4 파일만 올린 상태라면, 아직 **"웹사이트의 대문(index.html)"**이 없어서 페이지가 보이지 않을 겁니다.
+
+Sora로 만든 멋진 영상을 웹으로 보여주기 위해 딱 2가지 단계만 더 진행하면 됩니다.
+
+1단계: index.html 파일 만들기
+영상을 재생해 줄 플레이어(웹페이지)를 만들어야 합니다.
+
+깃허브 리포지토리 메인 화면에서 [Add file] -> **[Create new file]**을 누릅니다.
+
+파일 이름을 index.html로 입력합니다. (반드시 전부 소문자여야 합니다.)
+
+아래 코드를 복사해서 붙여넣고, 파일 이름만 수정하세요.
+
+HTML
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sora Video Showcase</title>
+    <style>
+        body {
+            background-color: #000; /* Sora 영상은 검은 배경에서 더 잘 보입니다 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: sans-serif;
+        }
+        video {
+            max-width: 90%; /* 화면 꽉 차게 조절 */
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Created with Sora</h1>
+    
+    <video controls autoplay muted playsinline>
+        <source src="업로드한_파일이름.mp4" type="video/mp4">
+        브라우저가 동영상을 지원하지 않습니다.
+    </video>
+
+</body>
+</html>
